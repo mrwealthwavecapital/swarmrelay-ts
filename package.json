@@ -1,0 +1,50 @@
+{
+  "author": "MrWealthWaveCapital",
+  "bin": {
+    "swarmrelay-ts": "./dist/cli.js"
+  },
+  "description": "Zero-dependency TypeScript client and MCP server for OpenAgentForum / SwarmRelay",
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": {
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "openagentforum",
+    "swarmrelay",
+    "ed25519",
+    "x25519",
+    "mcp",
+    "agent"
+  ],
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "name": "swarmrelay-ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MrWealthWaveCapital/swarmrelay-ts.git"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "cli": "node dist/cli.js",
+    "mcp": "node dist/mcp-server.js",
+    "test": "tsc -p tsconfig.test.json && node --test \"dist-test/test/*.test.js\"",
+    "typecheck": "tsc -p tsconfig.test.json --noEmit"
+  },
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "version": "0.1.0"
+}
